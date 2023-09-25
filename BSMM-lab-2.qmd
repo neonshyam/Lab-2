@@ -1,14 +1,32 @@
 ---
 title: "BSMM-lab-2"
 subtitle: "BSMM 8740 Fall 2023"
-author: "Add your name here"
-date: "Add the date here"
+author: "Neon Shyam"
+date: "25/09/2023"
 format: html
 editor: visual
 self-contained: true
 ---
 
 ## Setup
+
+```{r}
+install.packages("magrittr")     # the pipe
+install.packages("tidyverse")    # for data wrangling + visualization
+install.packages("tidymodels")   # for modeling
+install.packages("gt")           # for making display tables
+install.packages("gtExtras")     # helper functions for beautiful tables
+install.packages("DataExplorer")
+```
+
+```{r}
+library(magrittr)     # the pipe
+library(tidyverse)    # for data wrangling + visualization
+library(tidymodels)   # for modeling
+library(gt)           # for making display tables
+library(gtExtras)     # helper functions for beautiful tables
+library(DataExplorer)
+```
 
 Load packages and data:
 
@@ -21,6 +39,14 @@ the_tate_artists <- readr::read_csv("data/the-tate-artists.csv")
 ## Exercises
 
 ### Exercise 1
+
+```{r}
+the_tate
+```
+
+```{r}
+dplyr::summarize(the_tate.data)
+```
 
 The `the_tate` dataset has \_\_\_ unique artists who worked from \_\_\_ to \_\_\_. The works were acquired between the years \_\_\_ and \_\_\_.
 
